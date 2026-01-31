@@ -1,24 +1,26 @@
 using Microsoft.EntityFrameworkCore;
 using TallerBackend.Data;
-using System.IO;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Servicios
+// ------------------- Servicios -------------------
+// Controllers y Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// DbContext
+// DbContext SQLite
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=TallerDB.db"));
 
-// CORS (para Angular)
+// CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngularDev", policy =>
+    options.AddPolicy("AllowAngular", policy =>
     {
-        policy.WithOrigins("http://taller-fcfhfmhkhubda0d2.spaincentral-01.azurewebsites.net") // URL de Angular
+        policy.WithOrigins(
+            "http://localhost:4200", // Angular dev
+            "https://taller-fcfhfmhkhubda0d2.spaincentral-01.azurewebsites.net") // Angular prod
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
@@ -26,7 +28,9 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Middlewares
+// ------------------- Middlewares -------------------
+
+// Swagger solo en desarrollo
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -34,34 +38,27 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseCors("AllowAngularDev");
+app.UseCors("AllowAngular");
 
-app.UseDefaultFiles(); // sirve index.html automáticamente
-app.UseStaticFiles();  // sirve los archivos de Angular
+// Servir Angular
+app.UseDefaultFiles();   // index.html automáticamente
+app.UseStaticFiles();    // archivos estáticos de Angular
 
 app.UseRouting();
 app.UseAuthorization();
+
+// Map Controllers
 app.MapControllers();
 
-// Fallback para Angular SPA
-app.Use(async (context, next) =>
-{
-    await next();
+// ------------------- SPA Fallback -------------------
+// Cualquier ruta que no sea /api/... sirve index.html
+app.MapFallbackToFile("index.html");
 
-    if (context.Response.StatusCode == 404 &&
-        !Path.HasExtension(context.Request.Path.Value) &&
-        !context.Request.Path.Value.StartsWith("/api"))
-    {
-        context.Request.Path = "/index.html";
-        context.Response.StatusCode = 200; // importante
-        await next();
-    }
-});
-
+// ------------------- DB Inicial -------------------
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.EnsureCreated();
+    db.Database.EnsureCreated(); // crea la DB si no existe
 }
 
 app.Run();
