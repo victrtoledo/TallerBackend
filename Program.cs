@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularDev", policy =>
     {
-        policy.WithOrigins("http://localhost:4200") // URL de Angular
+        policy.WithOrigins("http://taller-fcfhfmhkhubda0d2.spaincentral-01.azurewebsites.net") // URL de Angular
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
