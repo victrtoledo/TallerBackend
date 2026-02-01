@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\suspension_2-300x300-1-150x150.webp"
     },
     {
+      "Id": "D:\\Plan 1 negocio plantillas\\TallerBackend\\wwwroot\\assets\\img\\taller-accion.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\taller-accion.jpg"
+    },
+    {
       "Id": "D:\\Plan 1 negocio plantillas\\TallerBackend\\wwwroot\\assets\\img\\whatsapp.svg",
       "PackagePath": "staticwebassets\\assets\\img\\whatsapp.svg"
     },
@@ -89,8 +93,8 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\Plan 1 negocio plantillas\\TallerBackend\\wwwroot\\main-DPPE6TL3.js",
-      "PackagePath": "staticwebassets\\main-DPPE6TL3.js"
+      "Id": "D:\\Plan 1 negocio plantillas\\TallerBackend\\wwwroot\\main-JVCD4F6W.js",
+      "PackagePath": "staticwebassets\\main-JVCD4F6W.js"
     },
     {
       "Id": "D:\\Plan 1 negocio plantillas\\TallerBackend\\wwwroot\\polyfills-B6TNHZQ6.js",

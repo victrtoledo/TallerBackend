@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B505VRtjqxl79o+RyVOfVT2+dIjBGm9hB4pHbxz710c=",
+  "Hash": "vdkvFYU2o/JhsDy9XzQOpLhreWQuj5jbxukjiso5ecU=",
   "Source": "TallerBackend",
   "BasePath": "_content/TallerBackend",
   "Mode": "Default",
@@ -245,6 +245,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\suspension_2-300x300-1-150x150.webp"
     },
     {
+      "Identity": "D:\\Plan 1 negocio plantillas\\TallerBackend\\wwwroot\\assets\\img\\taller-accion.jpg",
+      "SourceId": "TallerBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Plan 1 negocio plantillas\\TallerBackend\\wwwroot\\",
+      "BasePath": "_content/TallerBackend",
+      "RelativePath": "assets/img/taller-accion.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\taller-accion.jpg"
+    },
+    {
       "Identity": "D:\\Plan 1 negocio plantillas\\TallerBackend\\wwwroot\\assets\\img\\whatsapp.svg",
       "SourceId": "TallerBackend",
       "SourceType": "Discovered",
@@ -435,12 +454,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "D:\\Plan 1 negocio plantillas\\TallerBackend\\wwwroot\\main-DPPE6TL3.js",
+      "Identity": "D:\\Plan 1 negocio plantillas\\TallerBackend\\wwwroot\\main-JVCD4F6W.js",
       "SourceId": "TallerBackend",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Plan 1 negocio plantillas\\TallerBackend\\wwwroot\\",
       "BasePath": "_content/TallerBackend",
-      "RelativePath": "main-DPPE6TL3.js",
+      "RelativePath": "main-JVCD4F6W.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -451,7 +470,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\main-DPPE6TL3.js"
+      "OriginalItemSpec": "wwwroot\\main-JVCD4F6W.js"
     },
     {
       "Identity": "D:\\Plan 1 negocio plantillas\\TallerBackend\\wwwroot\\polyfills-B6TNHZQ6.js",
