@@ -160,3 +160,5 @@ D:\Plan 1 negocio plantillas\TallerBackend\bin\Debug\net8.0\runtimes\win-arm\nat
 D:\Plan 1 negocio plantillas\TallerBackend\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 D:\Plan 1 negocio plantillas\TallerBackend\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\Plan 1 negocio plantillas\TallerBackend\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+D:\Plan 1 negocio plantillas\TallerBackend\bin\Debug\net8.0\TallerBackend.staticwebassets.runtime.json
+D:\Plan 1 negocio plantillas\TallerBackend\obj\Debug\net8.0\TallerBackend.sourcelink.json
